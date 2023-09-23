@@ -66,7 +66,7 @@ public class ReservationServiceImpl implements ReservationService {
         }
 
         Reservation reservation=new Reservation();
-        reservation.setNoOfHours(timeInHours);
+        reservation.setNumberOfHours(timeInHours);
         reservation.setSpot(newspot);
         reservation.setUser(user);
 

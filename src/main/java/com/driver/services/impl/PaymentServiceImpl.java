@@ -22,7 +22,7 @@ public class PaymentServiceImpl implements PaymentService {
     public Payment pay(Integer reservationId, int amountSent, String mode) throws Exception {
 
         Reservation reservation=reservationRepository2.findById(reservationId).get();
-        int time=reservation.getNoOfHours();
+        int time=reservation.getNumberOfHours();
 
         Spot spot=reservation.getSpot();
 
