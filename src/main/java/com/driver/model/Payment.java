@@ -6,7 +6,7 @@ import javax.persistence.*;
 public class Payment {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
     private Boolean isPaymentCompleted;
@@ -41,7 +41,7 @@ public class Payment {
         return isPaymentCompleted;
     }
 
-    public void isPaymentCompleted(Boolean paymentCompleted) {
+    public void setPaymentCompleted(Boolean paymentCompleted) {
         isPaymentCompleted = paymentCompleted;
     }
 
