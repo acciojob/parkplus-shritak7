@@ -13,7 +13,7 @@ public class ParkingLot {
     private String name;
     private String address;
 
-    @OneToMany(mappedBy = "parkingLot")
+    @OneToMany(mappedBy = "parkingLot",cascade = CascadeType.ALL)
     List<Spot> spotList=new ArrayList<>();
 
     public ParkingLot() {

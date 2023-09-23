@@ -23,7 +23,7 @@ public class Spot {
     @JoinColumn
     ParkingLot parkingLot;
 
-    @OneToMany(mappedBy = "spot")
+    @OneToMany(mappedBy = "spot",cascade = CascadeType.ALL)
     List<Reservation> reservationList=new ArrayList<>();
 
     public Spot() {

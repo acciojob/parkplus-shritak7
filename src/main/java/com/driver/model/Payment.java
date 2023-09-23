@@ -15,7 +15,8 @@ public class Payment {
     private PaymentMode paymentMode;
 
 
-    @OneToOne(mappedBy = "payment")
+    @OneToOne
+    @JoinColumn
     Reservation reservation;
 
     public Payment() {
