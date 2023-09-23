@@ -15,8 +15,8 @@ public class Spot {
     private Boolean occupied;
     @ManyToOne
     @JoinColumn
-    private ParkingLot parkingLot;
-    @OneToMany(mappedBy="spot",cascade =CascadeType.ALL)
+    ParkingLot parkingLot;
+    @OneToMany(mappedBy="spot",cascade=CascadeType.ALL)
     List<Reservation> reservationList;
 
     public Spot() {

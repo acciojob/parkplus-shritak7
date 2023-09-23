@@ -12,7 +12,7 @@ public class Payment {
     private PaymentMode paymentMode;
     @OneToOne
     @JoinColumn
-    private Reservation reservation;
+    Reservation reservation;
 
     public Payment() {
     }
