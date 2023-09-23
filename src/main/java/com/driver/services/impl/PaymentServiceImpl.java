@@ -48,7 +48,7 @@ public class PaymentServiceImpl implements PaymentService {
             throw new CantmadeException("Insufficient Amount");
         }
 
-        payment.setPaymentCompleted(true);
+        payment.isPaymentCompleted(true);
         payment.setReservation(reservation);
         spot.setOccupied(false);
         reservation.setPayment(payment);
