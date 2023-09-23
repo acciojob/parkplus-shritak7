@@ -1,25 +1,20 @@
 package com.driver.model;
 
-import org.hibernate.annotations.GeneratorType;
-import org.hibernate.annotations.Immutable;
-
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-
 @Entity
+@Table(name="user")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id;
-
     private String name;
     private String phoneNumber;
     private String password;
-
-    @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
-    List<Reservation>reservationList=new ArrayList<>();
+    @OneToMany(mappedBy ="user",cascade =CascadeType.ALL)
+    List<Reservation> reservationList;
 
     public User() {
     }
@@ -29,7 +24,7 @@ public class User {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.password = password;
-        this.reservationList = reservationList;
+        this.reservationList = new ArrayList<>();
     }
 
     public int getId() {
